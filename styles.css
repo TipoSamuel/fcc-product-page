@@ -142,7 +142,7 @@ body {
   padding: 0 40px;
   border-radius: 1.5rem;
   min-height: calc(100dvh - 24px * 2);
-  background-image: url(https://www.lofree.co/cdn/shop/files/BlockP101_2048x2048.webp);
+  background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/BlockP101_2048x2048.webp);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -201,7 +201,7 @@ body {
   border-radius: 1.5rem;
   height: 80vh;
   & .left {
-    background-image: url(https://ucarecdn.com/d76071f5-78af-476b-8d11-05bbc5b0876e/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2646.jpg);
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/fea163b18b694b0f9eb87dc4b083a289.jpg);
     border-radius: 1.5rem 0 0 1.5rem;
     background-size: cover;
     background-repeat: no-repeat;
@@ -230,7 +230,8 @@ body {
   }
   & .down-left {
     grid-area: down-left;
-    background-image: url(https://ucarecdn.com/c1ac2ea6-3973-4e7c-b4db-505fa33914ca/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2983.jpg);
+    /* background-image: url(https://ucarecdn.com/c1ac2ea6-3973-4e7c-b4db-505fa33914ca/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2983.jpg); */
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/33082649c6dd4372b09fc010dddb47c0.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left center;
@@ -238,7 +239,8 @@ body {
   }
   & .down-right {
     grid-area: down-right;
-    background-image: url(https://ucarecdn.com/ac772fa5-c037-4893-92f2-01c6ed84bff6/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2688.jpg);
+    /* background-image: url(https://ucarecdn.com/ac772fa5-c037-4893-92f2-01c6ed84bff6/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2688.jpg); */
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/d34174c67f5b4b94a93c6b76505f6844.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -299,8 +301,9 @@ body {
     grid-area: sound-left-2;
     height: 400px;
     border-radius: 1.5rem;
-    background-image: url(https://cdn.shopify.com/s/files/1/0631/9590/6271/files/2_22fa392c-0a05-4c62-b804-c9e1b8e66a21.jpg);
-    background-position: center;
+    /* background-image: url(https://cdn.shopify.com/s/files/1/0631/9590/6271/files/2_22fa392c-0a05-4c62-b804-c9e1b8e66a21.jpg); */
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/6d58ff66e2d0464fadf775f47b6a31e4.webp);
+    background-position: bottom center;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -308,7 +311,8 @@ body {
     grid-area: sound-right;
     height: auto;
     border-radius: 1.5rem;
-    background-image: url(https://www.fashaoyou.net/wp-content/uploads/2023/11/qaGJVkCZLDcx8UXW.jpg);
+    /* background-image: url(https://www.fashaoyou.net/wp-content/uploads/2023/11/qaGJVkCZLDcx8UXW.jpg); */
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/a7999e28e71741e8ba463f2b7af80bbd.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -329,7 +333,8 @@ body {
     height: 450px;
     width: auto;
     border-radius: 1.5rem 0 0 1.5rem;
-    background-image: url(https://ucarecdn.com/be76c46d-e31f-4da4-96ee-ed066841c37e/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2627.jpg);
+    /* background-image: url(https://ucarecdn.com/be76c46d-e31f-4da4-96ee-ed066841c37e/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2627.jpg); */
+    background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/b72b9942fc7b49debe199420dec62e16.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

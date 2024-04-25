@@ -43,32 +43,42 @@ fieldset {
 }
 /* CSS reset */
 
+:root {
+  /* colors */
+  --primary-color: #f26835;
+  --black-color: #141517;
+
+  /* fonts */
+  --font-sans: 'Karla Variable', sans-serif;
+  --font-mono: 'Inconsolata Variable', monospace;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
 body {
-  background-color: #141517;
-  color: #141517;
-  margin: 24px;
+  background-color: var(--black-color);
+  color: var(--black-color);
+  margin: 1.5rem;
 }
 
 .tag {
   display: inline-block;
   width: fit-content;
-  font-family: 'Inconsolata Variable', monospace;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 9999px;
-  background-color: #f26835;
+  background-color: var(--primary-color);
 }
 .title {
-  font-family: 'Karla variable', sans-serif;
-  font-size: 2.25rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 0.5357rem + 1.7857vw, 2.25rem);
 }
 .text {
-  font-family: 'Inconsolata Variable', monospace;
+  font-family: var(--font-mono);
 }
 
 #header {
@@ -83,7 +93,7 @@ body {
     padding-top: 24px;
   }
 
-  & #nav-bar ul {
+  #nav-bar ul {
     width: 600px;
     display: flex;
     align-items: center;
@@ -112,18 +122,18 @@ body {
   }
 
   a {
-    font-family: 'Karla variable', sans-serif;
+    font-family: var(--font-sans);
     font-size: 0.875rem;
     padding: 5px 10px;
     border-radius: 9999px;
     font-weight: 400;
     text-decoration: none;
-    color: #262423;
+    color: var(--black-color);
     transition: 0.3s ease;
   }
 
   a:hover:not(.link-logo) {
-    background-color: #f26835;
+    background-color: var(--primary-color);
   }
 
   .logo {
@@ -137,9 +147,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   row-gap: 20px;
-  padding: 0 40px;
+  padding: 2.5rem;
   border-radius: 1.5rem;
   min-height: calc(100dvh - 24px * 2);
   background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/BlockP101_2048x2048.webp);
@@ -150,20 +160,20 @@ body {
 
   h2 {
     font-size: 8rem;
-    font-family: 'Karla variable', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 800;
-    color: #f26835;
+    color: var(--primary-color);
   }
   .caption {
     width: 100%;
     align-self: flex-start;
   }
   & svg {
-    fill: #f26835;
+    fill: var(--primary-color);
     width: 40px;
   }
   & p {
-    font-family: 'Karla variable', sans-serif;
+    font-family: var(--font-sans);
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -185,7 +195,7 @@ body {
     align-items: center;
     transform: translateX(0);
     animation: a-text-scroll 25s linear infinite;
-    font-family: 'Inconsolata variable', monospace;
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 6rem;
   }
@@ -193,8 +203,8 @@ body {
 
 .design {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     'left right'
     'left down';
@@ -221,8 +231,8 @@ body {
   & .down {
     grid-area: down;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
       'down-left down-left down-right'
       'down-left down-left down-right'
@@ -230,7 +240,6 @@ body {
   }
   & .down-left {
     grid-area: down-left;
-    /* background-image: url(https://ucarecdn.com/c1ac2ea6-3973-4e7c-b4db-505fa33914ca/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2983.jpg); */
     background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/33082649c6dd4372b09fc010dddb47c0.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -239,7 +248,6 @@ body {
   }
   & .down-right {
     grid-area: down-right;
-    /* background-image: url(https://ucarecdn.com/ac772fa5-c037-4893-92f2-01c6ed84bff6/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2688.jpg); */
     background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/d34174c67f5b4b94a93c6b76505f6844.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -251,10 +259,10 @@ body {
 
 .light {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 50vh;
+  grid-template-columns: repeat(2, 1fr);
   border-radius: 1.5rem;
   margin-top: 1.5rem;
+  min-height: 500px;
 
   .light-left {
     display: flex;
@@ -263,7 +271,7 @@ body {
     row-gap: 20px;
     padding: 60px;
     border-radius: 1.5rem 0 0 1.5rem;
-    background-color: #f26835;
+    background-color: var(--primary-color);
     .tag {
       background-color: #faebd7;
     }
@@ -277,8 +285,8 @@ body {
 
 .sound {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     'sound-left-1 sound-right sound-right'
     'sound-left-2 sound-right sound-right';
@@ -301,7 +309,6 @@ body {
     grid-area: sound-left-2;
     height: 400px;
     border-radius: 1.5rem;
-    /* background-image: url(https://cdn.shopify.com/s/files/1/0631/9590/6271/files/2_22fa392c-0a05-4c62-b804-c9e1b8e66a21.jpg); */
     background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/6d58ff66e2d0464fadf775f47b6a31e4.webp);
     background-position: bottom center;
     background-size: cover;
@@ -311,7 +318,6 @@ body {
     grid-area: sound-right;
     height: auto;
     border-radius: 1.5rem;
-    /* background-image: url(https://www.fashaoyou.net/wp-content/uploads/2023/11/qaGJVkCZLDcx8UXW.jpg); */
     background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/a7999e28e71741e8ba463f2b7af80bbd.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -321,19 +327,18 @@ body {
 
 .pre-order {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 500px;
 }
 
 .pre-order {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 1.5rem;
 
   & .pre-order-left {
-    height: 450px;
     width: auto;
     border-radius: 1.5rem 0 0 1.5rem;
-    /* background-image: url(https://ucarecdn.com/be76c46d-e31f-4da4-96ee-ed066841c37e/-/format/auto/-/preview/3000x3000/-/quality/lighter/DSC_2627.jpg); */
     background-image: url(https://pub-feb28ae3112c45d181cba7f03400ea17.r2.dev/b72b9942fc7b49debe199420dec62e16.webp);
     background-size: cover;
     background-position: center;
@@ -344,24 +349,23 @@ body {
     flex-direction: column;
     justify-content: center;
     row-gap: 20px;
-    height: 450px;
     border-radius: 0 1.5rem 1.5rem 0;
     padding: 60px;
-    background-color: #f26835;
+    background-color: var(--primary-color);
     .tag {
       background-color: #faebd7;
     }
     #email {
-      font-family: 'Inconsolata Variable', monospace;
+      font-family: var(--font-mono);
       font-size: 0.875rem;
       font-weight: 500;
       padding: 10px 20px;
+      margin-bottom: 20px;
       border-radius: 9999px;
       border: none;
-      width: 40%;
     }
     #submit {
-      font-family: 'Inconsolata Variable', monospace;
+      font-family: var(--font-mono);
       font-size: 0.875rem;
       font-weight: 500;
       padding: 10px 20px;
@@ -379,7 +383,7 @@ body {
 }
 
 .footer {
-  font-family: 'Inconsolata Variable', monospace;
+  font-family: var(--font-mono);
   font-size: 0.875rem;
   font-weight: 500;
   color: white;
@@ -390,14 +394,14 @@ body {
   height: 20vh;
   background-color: #141517;
   a {
-    color: #f26835;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 700;
   }
 }
 
 /* Responsive */
-@media screen and (width < 480px) {
+@media screen and (width < 640px) {
   .text {
     display: none;
   }
@@ -414,6 +418,51 @@ body {
   }
   .marquee {
     height: 150px;
+  }
+  .design {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'left'
+      'right';
+    height: unset;
+    .left {
+      min-height: 450px;
+      border-radius: 1.5rem 1.5rem 0 0;
+    }
+    .right {
+      row-gap: 20px;
+      min-height: 50px;
+      padding: 20px;
+      border-radius: 0 0 1.5rem 1.5rem;
+    }
+    .down {
+      display: none;
+    }
+  }
+
+  .light {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'light-right'
+      'light-left';
+    min-height: unset;
+    .light-right {
+      grid-area: light-right;
+      iframe {
+        min-height: 450px;
+        border-radius: 1.5rem 1.5rem 0 0;
+      }
+    }
+    .light-left {
+      grid-area: light-left;
+      row-gap: 20px;
+      border-radius: 0 0 1.5rem 1.5rem;
+      padding: 20px;
+    }
+  }
+  .footer {
+    text-align: center;
   }
 }
 

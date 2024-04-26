@@ -79,6 +79,8 @@ body {
 }
 .text {
   font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 #header {
@@ -500,6 +502,32 @@ body {
   }
   .footer {
     text-align: center;
+  }
+}
+
+@media screen and (width < 768px) {
+  .design {
+    .right {
+      justify-content: center;
+      row-gap: 20px;
+      padding: 20px;
+    }
+  }
+  .light {
+    .light-left {
+      padding: 20px;
+    }
+  }
+  .sound {
+    grid-template-columns: repeat(2, 1fr);
+    .sound-left-1 {
+      padding: 20px;
+    }
+  }
+  .pre-order {
+    .pre-order-right {
+      padding: 20px;
+    }
   }
 }
 
